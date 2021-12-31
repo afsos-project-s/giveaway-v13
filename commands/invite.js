@@ -11,7 +11,7 @@ module.exports.run = async (client, message, args) => {
         new MessageButton()
         .setLabel('Support Server')
         .setStyle('LINK')
-        .setURL("https://discord.gg/ARu4hr6hJw"),
+        .setURL("https://discord.gg/"), // put your server link
     )
     let invite = new MessageEmbed()
     .setAuthor(`Invite ${client.user.username} `, client.user.avatarURL())
@@ -19,6 +19,6 @@ module.exports.run = async (client, message, args) => {
     .setDescription(`Invite ${client.user} to your server today & enjoy seamless giveaways with advvanced features!`)
     .setColor('#2F3136')
     .setTimestamp()
-    .setFooter(`Requested by ${message.author.tag} | GiveawayBot™ v3 By ZeroSync`, message.author.displayAvatarURL())
+    .setFooter(`Requested by ${message.author.tag} | GiveawayBot`, message.author.displayAvatarURL())
     message.reply({ embeds: [invite], components: [row]});
 }
